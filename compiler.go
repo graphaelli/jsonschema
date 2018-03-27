@@ -85,6 +85,8 @@ func (c *Compiler) draft(v interface{}) (*Draft, error) {
 			switch url {
 			case "http://json-schema.org/schema#":
 				return latest, nil
+			case "http://json-schema.org/draft-07/schema#":
+				return Draft7, nil
 			case "http://json-schema.org/draft-06/schema#":
 				return Draft6, nil
 			case "http://json-schema.org/draft-04/schema#":
